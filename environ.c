@@ -22,6 +22,7 @@ char *_getenv(info_t *info, const char *name)
 {
 	list_t *node = info->env;
 	char *p;
+
 	while (node)
 	{
 		p = starts_with(node->str, name);
@@ -36,7 +37,7 @@ char *_getenv(info_t *info, const char *name)
  * _mysetenv - Initialize a new environment variable,
  *  or modify an existing one
  *  @info: Structure containing potential argumens. Used to maintain
- *  	Constant function prototype.
+ *  Constant function prototype.
  *  Return: Always 0
  */
 int _mysetenv(info_t *info)
@@ -54,7 +55,7 @@ int _mysetenv(info_t *info)
 /**
  * _myunsetenv - Remove an environment variable
  * @info: Structure containing potential arguments. Used to maintain
- * 	constant function prototype.
+ * constant function prototype.
  * Return: Always 0
  */
 int _myunsetenv(info_t *info)
