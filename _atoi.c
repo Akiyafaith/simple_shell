@@ -33,10 +33,10 @@ int is_delim(char c, char *delim)
  * Return: 1 if c is alphabetic, 0 otherwise
  */
 
-int_isalpha(int c)
+int _isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1)
+		return (1);
 	else
 		return (0);
 }
@@ -47,7 +47,7 @@ int_isalpha(int c)
  * Return: 0 if no nmbers in string, converted number otherwise
  */
 
-int_atoi(char *s)
+int _atoi(char *s)
 {
 	int i, sign = 1, flag = 0, output;
 	unsigned int result = 0;
