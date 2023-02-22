@@ -7,10 +7,10 @@
  * Return: exits with a given exit status
  * (0) if info.argv[0] != "exit"
  */
-int_myexit(info_t *info)
+int _myexit(info_t *info)
 {
 	int exitcheck;
-	if (info->argv[1]/* if there is an exit argument */
+	if (info->argv[1]) /* If there is an exit arguement */
 	{
 		exitcheck = _erratoi(info->argv[1]);
 		if (exitcheck == -1)
@@ -28,7 +28,6 @@ int_myexit(info_t *info)
 	info->err_num = -1;
 	return (-2);
 }
-
 /**
  * _mycd - changes the current directory of the process
  * @info: Structure cotaining potential arguments . Used to maintain
@@ -36,7 +35,7 @@ int_myexit(info_t *info)
  * Return: Always 0
 */
 
-int_mycd(info_t *info)
+int _mycd(info_t *info)
 {
 	char *s, *dir, buffer[1024];
 	int chdir_ret;
@@ -70,7 +69,7 @@ int_mycd(info_t *info)
 	if (chdir_ret == -1)
 	{
 		print_error(info, "can't cd to");
-		_eputs(info->argv[1], _eputchar('\n');
+		_eputs(info->argv[1]), _eputchar('\n');
 	}
 	else
 	{

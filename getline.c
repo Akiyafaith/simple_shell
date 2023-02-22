@@ -115,7 +115,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
  */
 int _getline(info_t *info, char **ptr, size_t *length)
 {
-	static char buf[READ_BUF_SIZE]
+	static char buf[READ_BUF_SIZE];
 	static size_t i, len;
 	size_t k;
 	ssize_t r = 0, s = 0;
@@ -126,7 +126,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 		s = *length;
 	if (i == len)
 		i = len = 0;
-	r = read_buf(info, buf, &len);
+	r = read_buf (info, buf, &len);
 	if (r == -1 || (r == 0 && len == 0))
 		return (-1);
 
