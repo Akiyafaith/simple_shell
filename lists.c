@@ -82,6 +82,7 @@ return (new_node);
 int delete_node_at_index(list_t **head, unsigned int index)
 {
 	list_t *node, *prev_node;
+
 	unsigned int i = 0;
 
 	if (!head || !*head)
